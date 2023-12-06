@@ -1,0 +1,76 @@
+
+.header-container {
+    padding: 15px;
+    background-color: white;
+    /* border: 1px solid black; */
+    border-radius: 18px;
+    width: 100%;
+}
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.title {
+    background-color: white;
+}
+.button {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background-color: rgb(84, 193, 217);
+    border: none;
+}
+.button:hover {
+    background-color: rgba(84, 193, 217, 0.683);
+}
+.button:active {
+    background-color: rgba(84, 193, 217, 0.683);
+}
+.button-text {
+    font-weight: 500;
+    font-size: 20px;
+}
+.button-icon {
+    height: 30px;
+    width: 30px;
+    color: white;
+}
+.footer {
+    text-align: center;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-text {
+    font-size: 25;
+}
+.footer > a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.footer-icon {
+    height: 25px;
+    width: 25px;
+}
+.footer-icon:hover {
+    animation: spin .5s linear;
+
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+

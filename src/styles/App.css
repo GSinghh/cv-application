@@ -1,0 +1,18 @@
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #00000030;
+}
+.left-side {
+    /* border: 1px solid black; */
+    height: 100vh;
+    width: 50%;
+}
+.right-side {
+    /* border: 1px solid black; */
+    height: 100vh;
+    width: 50%;
+}
