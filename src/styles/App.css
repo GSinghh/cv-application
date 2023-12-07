@@ -8,11 +8,14 @@
 }
 .left-side {
     /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     height: 100vh;
-    width: 50%;
+    width: 45%;
 }
 .right-side {
     /* border: 1px solid black; */
     height: 100vh;
-    width: 50%;
+    width: 55%;
 }
