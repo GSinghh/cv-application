@@ -11,10 +11,9 @@ const UserData = () => {
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
-        setFormData({...formData, [name]: value, });
+        setFormData({ ...formData, [name]: value, });
     };
 
-    // console.log(formData)
     return (
         <div className = "user-container">
             <h1 className = "user-title">Personal Information</h1>
