@@ -6,3 +6,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+    background-color: #00000030;
+    padding: 20px;
+    height: 100%;
+}
