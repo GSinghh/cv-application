@@ -16,7 +16,7 @@ const App = () => {
       </div>
       <div className = "right-side">
       </div>
-    </div>
+    </div> 
   )
 }
 
