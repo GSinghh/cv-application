@@ -4,13 +4,14 @@ import Header from '../components/Header.jsx'
 import UserData from './UserData.jsx'
 import Education from './Education.jsx'
 import Experience from './Experience.jsx'
+import Resume from './Resume.jsx'
 import { useState } from 'react'
 
 const App = () => {
   const [userData, setUserData] = useState({});
   const [educationData, setEducationData] = useState({});
   const [experienceData, setExperienceData] = useState({});
-  
+
   return (
     <div className = "container">
       <div className = "left-side">
@@ -20,6 +21,7 @@ const App = () => {
         <Experience experienceData = {experienceData} setExperienceData = {setExperienceData}/>
       </div>
       <div className = "right-side">
+        <Resume eduData = {educationData} userData = {userData} expData = {experienceData} />
       </div>
     </div> 
   )
