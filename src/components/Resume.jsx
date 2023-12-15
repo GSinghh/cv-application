@@ -1,6 +1,10 @@
+import '../styles/Resume.css'
+
 const Resume = ({ userData, expData, eduData }) => {
     return (
-        <h1>{userData.fullName}</h1>
+        <div className = 'resume-container'>
+            <h1 className = 'resume-title'>{userData.fullName}</h1>
+        </div>
     );
 }
 
