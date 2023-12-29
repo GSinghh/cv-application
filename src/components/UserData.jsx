@@ -15,10 +15,10 @@ const UserData = ({ userData, setUserData }) => {
                 <input type = "text" className = "user-input" value = {userData.fullName} onChange={handleInputChange} name = "fullName"/>
                 <label>Email</label>
                 <input type = "text" className = "user-input" value = {userData.email} onChange={handleInputChange} name = "email"/>
-                <label>Phone Number</label>
-                <input type = "text" className = "user-input" value = {userData.phoneNumber} onChange={handleInputChange} name = "phoneNumber"/>
-                <label>Address</label>
-                <input type = "text" className = "user-input"value = {userData.address} onChange={handleInputChange} name = "address"/>
+                <label>Github</label>
+                <input type = "text" className = "user-input" value = {userData.github} onChange={handleInputChange} name = "github"/>
+                <label>Linkedin</label>
+                <input type = "text" className = "user-input"value = {userData.linkedin} onChange={handleInputChange} name = "linkedin"/>
             </form>
         </div>
     );

@@ -8,8 +8,8 @@ const Resume = ({ userData, expData, eduData }) => {
             </h1>
             <div className = 'resume-header'>
                 <h3>{userData.email}</h3> 
-                <h3>{userData.phoneNumber}</h3>
-                <h3>{userData.address}</h3>
+                <h3>{userData.github}</h3>
+                <h3>{userData.linkedin}</h3>
             </div>
             <div className = 'edu-container'>
                 <h3>{eduData.school}</h3>
