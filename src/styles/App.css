@@ -3,6 +3,7 @@
     display: flex;
 }
 .left-side {
+    font-family: 'Comfortaa';
     /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
@@ -11,6 +12,7 @@
     width: 45%;
 }
 .right-side {
+    font-family: 'PT serif';
     width: 100vh;
     margin-left: 20px;
 }
