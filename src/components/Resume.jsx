@@ -5,6 +5,7 @@ const Resume = ({ userData, expData, eduData }) => {
     const linkedinLink = "https://www." + userData.linkedin;
     return (
         <div className = 'resume-container'>
+            
             <h1 className = 'resume-title'>
                 {userData.fullName}
             </h1>
@@ -18,18 +19,22 @@ const Resume = ({ userData, expData, eduData }) => {
                 </a>
             </div>
             <div className = 'education-container'>
-                <h2>Education</h2>
-                <div className = 'line'></div>
-
-                <h3>{eduData.school}</h3>
+                <div className = "education-header">
+                    <h2>Education</h2>
+                    <div className = 'line'></div> 
+                </div>
+                <div className = "education-firstline">
+                    <h3>{eduData.school}</h3>
+                    <h3>{eduData.startDate + " - " + eduData.endDate}</h3>
+                </div>
                 <h3>{eduData.degree}</h3>
-                <h3>{eduData.startDate}</h3>
-                <h3>{eduData.endDate}</h3>
                 <h3>{eduData.location}</h3>
             </div>
             <div className = 'workexp-container'>
-                <h2>Work Experience</h2>
-                <div className = "line"></div>
+                <div className = "workexp-header">
+                    <h2>Work Experience</h2>
+                    <div className = "line"></div>
+                </div>
                 <h3>{expData.position}</h3>
                 <h3>{expData.company}</h3>
                 <h3>{expData.startDate}</h3>
