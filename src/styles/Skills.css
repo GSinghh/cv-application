@@ -1,0 +1,29 @@
+.skills-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0,0,10px rgba(0, 0, 0, .1);
+}
+.skills-title {
+    padding-bottom: 20px;
+}
+.skills-form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+} 
+form > label 
+{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.skills-input {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    background-color: rgba(212, 212, 212, 0.625);
+}
+textarea {
+    resize: none;
+}
