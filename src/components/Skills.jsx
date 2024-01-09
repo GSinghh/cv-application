@@ -4,7 +4,7 @@ import { useState } from 'react';
 const Skills = ({ skillsData, setSkillsData }) => {
     const handleInputChange = (event) => {
         const { name, value } = event.target;
-        setSkillsData({ ...userData, [name]: value, });
+        setSkillsData({ ...skillsData, [name]: value, });
     };
 
     return (
@@ -16,7 +16,7 @@ const Skills = ({ skillsData, setSkillsData }) => {
                 <label>Technologies</label>
                 <input type = "text" className = "skills-input" value = {skillsData.technologies} onChange={handleInputChange} name = "technologies" placeholder = 'i.e. React.js, Express.js, Node.js' />
                 <label>Tools</label>
-                <input type = "text" className = "skills-input" value = {skillsData.tools} onChange={handleInputChange} name = "github" placeholder='i.e. Git, MongoDB, Vite'/>
+                <input type = "text" className = "skills-input" value = {skillsData.tools} onChange={handleInputChange} name = "tools" placeholder='i.e. Git, MongoDB, Vite'/>
             </form>
         </div>
     );
