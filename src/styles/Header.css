@@ -21,15 +21,12 @@
     align-items: center;
     gap: 10px;
     border-radius: 8px;
-    background-color: rgb(80, 200, 120);
+    background-color: rgb(102, 254, 153);
     border: none;
     cursor: pointer;
 }
 .button:hover {
-    background-color: rgb(103, 255, 154);
-}
-.button:active {
-    background-color: rgba(84, 193, 217, 0.683);
+    background-color: rgb(67, 233, 122);
 }
 .button-text {
     font-weight: 500;
