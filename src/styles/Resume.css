@@ -16,19 +16,18 @@
 .resume-header > h3 .resume-header > a {
     font-size: 12px;
 }
-.education-container {
-    margin: 0;
-    padding: 0;
+.content-body {
+    padding: 5px 10px;
 }
-.education-firstline {
+.first {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 3px 10px;
 }
-.workexp-container {
-    margin: 0;
-    padding: 0;
+.second {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 a {
     text-decoration: none;
