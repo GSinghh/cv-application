@@ -1,5 +1,5 @@
 import "../styles/Header.css";
-import downloadCloud from "../assets/downloadCloud.svg";
+import downloadArrow from "../assets/downloadArrow.svg";
 import githubMark from "../assets/github-mark.svg";
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
             <span className="button-text">Save</span>
             <img
               className="button-icon"
-              src={downloadCloud}
+              src={downloadArrow}
               alt="download icon"
             />
           </button>
