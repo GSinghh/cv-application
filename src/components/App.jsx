@@ -9,36 +9,36 @@ import Resume from "./Resume.jsx";
 import { useState } from "react";
 
 const App = () => {
-  const [userData, setUserData] = useState({});
-  const [educationData, setEducationData] = useState({});
-  const [experienceData, setExperienceData] = useState({});
-  const [skillsData, setSkillsData] = useState({});
+    const [userData, setUserData] = useState({});
+    const [educationData, setEducationData] = useState({});
+    const [experienceData, setExperienceData] = useState({});
+    const [skillsData, setSkillsData] = useState({});
 
-  return (
-    <div className="container">
-      <div className="left-side">
-        <Header />
-        <UserData userData={userData} setUserData={setUserData} />
-        <Education
-          educationData={educationData}
-          setEducationData={setEducationData}
-        />
-        <Experience
-          experienceData={experienceData}
-          setExperienceData={setExperienceData}
-        />
-        <Skills skillsData={skillsData} setSkillsData={setSkillsData} />
-      </div>
-      <div className="right-side">
-        <Resume
-          eduData={educationData}
-          userData={userData}
-          expData={experienceData}
-          skillsData={skillsData}
-        />
-      </div>
-    </div>
-  );
+    return (
+        <div className="container">
+            <div className="left-side">
+                <Header />
+                <UserData userData={userData} setUserData={setUserData} />
+                <Education
+                    educationData={educationData}
+                    setEducationData={setEducationData}
+                />
+                <Experience
+                    experienceData={experienceData}
+                    setExperienceData={setExperienceData}
+                />
+                <Skills skillsData={skillsData} setSkillsData={setSkillsData} />
+            </div>
+            <div className="right-side">
+                <Resume
+                    eduData={educationData}
+                    userData={userData}
+                    expData={experienceData}
+                    skillsData={skillsData}
+                />
+            </div>
+        </div>
+    );
 };
 
 export default App;
