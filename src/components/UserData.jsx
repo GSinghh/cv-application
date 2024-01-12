@@ -12,7 +12,7 @@ const UserData = ({ userData, setUserData }) => {
         setUserData({ ...userData, [name]: value });
     };
 
-    const toggleAccordion = () => {
+    const toggleView = () => {
         setIsClosing(true);
         setTimeout(() => {
             setIsOpen(!isOpen);
@@ -28,7 +28,7 @@ const UserData = ({ userData, setUserData }) => {
         >
             <div className="user-header">
                 <h1 className="user-title">Personal Information</h1>
-                <div className="arrow" onClick={toggleAccordion}>
+                <div className="arrow" onClick={toggleView}>
                     <img
                         src={arrowUp}
                         alt="arrow"
