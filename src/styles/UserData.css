@@ -1,25 +1,49 @@
 .user-container {
-  background-color: white;
-  padding: 20px;
-  border-radius: 18px;
-  box-shadow: 0, 0, 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-height: 100px;
+    max-height: 420px;
+    transition: max-height 0.5s ease;
+}
+.open {
+    max-height: 420px;
+}
+.closing {
+    min-height: 100px;
+    max-height: 100px;
+    transition: max-height 0.4s ease;
+}
+.user-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.arrow > img {
+    height: 25px;
+    width: 25px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
 }
 .user-title {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 .user-form {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 }
 form > label {
-  margin-bottom: 5px;
-  font-weight: bold;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 .user-input {
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
-  width: 100%;
-  background-color: rgba(212, 212, 212, 0.625);
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    background-color: rgba(212, 212, 212, 0.625);
 }
