@@ -20,7 +20,7 @@
   align-items: center;
   gap: 10px;
   border-radius: 8px;
-  background-color: rgb(102, 254, 153);
+  background-color: rgb(100, 255, 152);
   border: none;
   cursor: pointer;
 }
@@ -32,8 +32,8 @@
   font-size: 20px;
 }
 .button-icon {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   color: white;
 }
 .footer {
