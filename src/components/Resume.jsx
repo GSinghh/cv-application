@@ -55,8 +55,8 @@ const Resume = ({ userData, expData, eduData, skillsData }) => {
                 </div>
                 <h3>{expData.description}</h3>
             </div>
-            <div classNames="skills-container">
-                <div className="skills-header">
+            <div classNames="skills-resume-container">
+                <div className="skills-resume-header">
                     <h2>Skills</h2>
                     <div className="line"></div>
                 </div>
