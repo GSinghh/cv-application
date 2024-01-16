@@ -1,25 +1,43 @@
 .edu-container {
-  background-color: white;
-  padding: 20px;
-  border-radius: 18px;
-  box-shadow: 0, 0, 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-height: 100px;
+    max-height: 450px;
+    transition: max-height 0.5s ease;
 }
 .edu-title {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
+}
+.edu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.edu-open {
+    max-height: 500px;
+}
+.edu-closing {
+    min-height: 100px;
+    max-height: 100px;
+    transition: max-height 0.4s ease;
 }
 .edu-form {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 }
 form > label {
-  margin-bottom: 5px;
-  font-weight: bold;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 .edu-input {
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
-  width: 100%;
-  background-color: rgba(212, 212, 212, 0.625);
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    background-color: rgba(212, 212, 212, 0.625);
 }
