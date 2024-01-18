@@ -7,6 +7,7 @@ import Experience from "./Experience.jsx";
 import Skills from "./Skills.jsx";
 import Resume from "./Resume.jsx";
 import { useState } from "react";
+// import circleinfo from "../assets/circleinfo";
 
 const App = () => {
     const [userData, setUserData] = useState({});
@@ -36,6 +37,12 @@ const App = () => {
                     expData={experienceData}
                     skillsData={skillsData}
                 />
+                {/* <a
+                    href="https://www.reddit.com/r/EngineeringResumes/wiki/index/"
+                    target="_blank"
+                >
+                    <img src={circleinfo} />
+                </a> */}
             </div>
         </div>
     );
