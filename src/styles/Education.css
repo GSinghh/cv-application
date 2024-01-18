@@ -5,7 +5,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     min-height: 100px;
-    max-height: 450px;
+    max-height: 500px;
     transition: max-height 0.5s ease;
 }
 .edu-title {
@@ -17,7 +17,7 @@
     justify-content: space-between;
 }
 .edu-open {
-    max-height: 500px;
+    max-height: 550px;
 }
 .edu-closing {
     min-height: 100px;
@@ -40,4 +40,16 @@ form > label {
     border: none;
     width: 100%;
     background-color: rgba(212, 212, 212, 0.625);
+}
+
+form > button {
+    margin-top: 10px;
+    align-self: center;
+    padding: 10px;
+    min-width: 200px;
+    border-radius: 18px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "comfortaa";
 }
