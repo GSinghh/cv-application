@@ -82,6 +82,7 @@ const Education = ({ educationData, setEducationData }) => {
                         onChange={handleInputChange}
                         name="location"
                     />
+                    <button>Add Education</button>
                 </form>
             )}
         </div>
