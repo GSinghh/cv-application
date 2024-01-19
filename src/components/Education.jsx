@@ -5,10 +5,23 @@ const Education = ({ educationData, setEducationData }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
     const [rotateArrow, setRotateArrow] = useState(false);
+    const [formData, setFormData] = useState({});
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
-        setEducationData({ ...educationData, [name]: value });
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setEducationData([...educationData, formData]);
+        setFormData({
+            school: "",
+            startDate: "",
+            endDate: "",
+            degree: "",
+            location: "",
+        });
     };
 
     const toggleView = () => {
@@ -41,12 +54,12 @@ const Education = ({ educationData, setEducationData }) => {
                 </div>
             </div>
             {isOpen && (
-                <form className="edu-form">
+                <form className="edu-form" onSubmit={handleSubmit}>
                     <label>School</label>
                     <input
                         type="text"
                         className="edu-input"
-                        value={educationData.school}
+                        value={formData.school}
                         onChange={handleInputChange}
                         name="school"
                     />
@@ -54,7 +67,7 @@ const Education = ({ educationData, setEducationData }) => {
                     <input
                         type="text"
                         className="edu-input"
-                        value={educationData.degree}
+                        value={formData.degree}
                         onChange={handleInputChange}
                         name="degree"
                     />
@@ -62,7 +75,7 @@ const Education = ({ educationData, setEducationData }) => {
                     <input
                         type="text"
                         className="edu-input"
-                        value={educationData.startDate}
+                        value={formData.startDate}
                         onChange={handleInputChange}
                         name="startDate"
                     />
@@ -70,7 +83,7 @@ const Education = ({ educationData, setEducationData }) => {
                     <input
                         type="text"
                         className="edu-input"
-                        value={educationData.endDate}
+                        value={formData.endDate}
                         onChange={handleInputChange}
                         name="endDate"
                     />
@@ -78,11 +91,11 @@ const Education = ({ educationData, setEducationData }) => {
                     <input
                         type="text"
                         className="edu-input"
-                        value={educationData.location}
+                        value={formData.location}
                         onChange={handleInputChange}
                         name="location"
                     />
-                    <button>Add Education</button>
+                    <button type="submit">Add Education</button>
                 </form>
             )}
         </div>
