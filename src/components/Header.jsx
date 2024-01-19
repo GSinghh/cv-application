@@ -7,7 +7,7 @@ const Header = () => {
             <div className="title-container">
                 <h1 className="title">Resume.IO</h1>
                 <button type="button" className="button">
-                    <span className="button-text">Save</span>
+                    <span className="button-text">Download</span>
                     <img
                         className="button-icon"
                         src={downloadArrow}
