@@ -5,7 +5,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     min-height: 100px;
-    max-height: 550px;
+    max-height: 700px;
     transition: max-height 0.5s ease;
 }
 .exp-header {
@@ -14,7 +14,7 @@
     justify-content: space-between;
 }
 .exp-open {
-    max-height: 550px;
+    max-height: 700px;
 }
 .exp-closing {
     min-height: 100px;
