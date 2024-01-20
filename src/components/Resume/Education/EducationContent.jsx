@@ -1,15 +1,13 @@
-const EducationContent = ({ eduData }) => {
+const EducationContent = ({ school, startDate, endDate, degree, location }) => {
     return (
         <div className="body-padding">
             <div className="first">
-                <h3>{eduData.school}</h3>
-                {eduData.startDate && eduData.endDate && (
-                    <h3>{eduData.startDate + " - " + eduData.endDate}</h3>
-                )}
+                <h3>{school}</h3>
+                <h3>{startDate + " - " + endDate}</h3>
             </div>
             <div className="second">
-                <h3>{eduData.degree}</h3>
-                <h3>{eduData.location}</h3>
+                <h3>{degree}</h3>
+                <h3>{location}</h3>
             </div>
         </div>
     );
