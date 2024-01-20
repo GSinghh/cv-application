@@ -6,10 +6,11 @@ const Experience = ({ experienceData, setExperienceData }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
     const [rotateArrow, setRotateArrow] = useState(false);
+    const [formData, setFormData] = useState({});
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
-        setExperienceData({ ...experienceData, [name]: value });
+        setFormData({ ...formData, [name]: value });
     };
 
     const toggleView = () => {
@@ -19,6 +20,19 @@ const Experience = ({ experienceData, setExperienceData }) => {
             setIsClosing(false);
             setRotateArrow(!rotateArrow);
         }, 500);
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setExperienceData([...experienceData, formData]);
+        setFormData({
+            position: "",
+            startDate: "",
+            endDate: "",
+            company: "",
+            description: "",
+            location: "",
+        });
     };
 
     return (
@@ -42,13 +56,13 @@ const Experience = ({ experienceData, setExperienceData }) => {
                 </div>
             </div>
             {isOpen && (
-                <form className="exp-form">
+                <form className="exp-form" onSubmit={handleSubmit}>
                     <label>Position</label>
                     <input
                         type="text"
                         className="exp-input"
                         onChange={handleInputChange}
-                        value={experienceData.position}
+                        value={formData.position}
                         name="position"
                     />
                     <label>Company</label>
@@ -56,15 +70,23 @@ const Experience = ({ experienceData, setExperienceData }) => {
                         type="text"
                         className="exp-input"
                         onChange={handleInputChange}
-                        value={experienceData.company}
+                        value={formData.company}
                         name="company"
+                    />
+                    <label>Location</label>
+                    <input
+                        type="text"
+                        className="exp-input"
+                        onChange={handleInputChange}
+                        value={formData.location}
+                        name="location"
                     />
                     <label>Start Date</label>
                     <input
                         type="text"
                         className="exp-input"
                         onChange={handleInputChange}
-                        value={experienceData.startDate}
+                        value={formData.startDate}
                         name="startDate"
                     />
                     <label>End Date</label>
@@ -72,17 +94,18 @@ const Experience = ({ experienceData, setExperienceData }) => {
                         type="text"
                         className="exp-input"
                         onChange={handleInputChange}
-                        value={experienceData.endDate}
+                        value={formData.endDate}
                         name="endDate"
                     />
                     <label>Job Description</label>
                     <textarea
                         className="exp-input"
                         onChange={handleInputChange}
-                        value={experienceData.description}
+                        value={formData.description}
                         name="description"
                         rows="4"
                     ></textarea>
+                    <button type="submit">Add Experience</button>
                 </form>
             )}
         </div>
