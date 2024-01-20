@@ -1,16 +1,22 @@
-const ExperienceContent = ({ expData }) => {
+const ExperienceContent = ({
+    position,
+    company,
+    startDate,
+    endDate,
+    description,
+    location,
+}) => {
     return (
         <div className="body-padding">
             <div className="first">
-                <h3>{expData.position}</h3>
-                {expData.startDate && expData.endDate && (
-                    <h3>{expData.startDate + " - " + expData.endDate}</h3>
-                )}
+                <h3>{position}</h3>
+                <h3>{startDate + " - " + endDate}</h3>
             </div>
             <div className="second">
-                <h3>{expData.company}</h3>
+                <h3>{company}</h3>
+                <h3>{location}</h3>
             </div>
-            <h3>{expData.description}</h3>
+            <h3>{description}</h3>
         </div>
     );
 };
