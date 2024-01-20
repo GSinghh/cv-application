@@ -1,17 +1,18 @@
 .container {
-  display: flex;
+    display: flex;
 }
 .left-side {
-  font-family: "Comfortaa";
-  /* border: 1px solid black; */
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  height: 100%;
-  width: 45%;
+    font-family: "Comfortaa";
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    width: 30%;
+    min-width: 350px;
 }
 .right-side {
-  font-family: "PT serif";
-  width: 100vh;
-  margin-left: 20px;
+    font-family: "PT serif";
+    width: 70%;
+    margin-left: 20px;
 }
