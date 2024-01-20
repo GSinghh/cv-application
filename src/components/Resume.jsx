@@ -1,9 +1,9 @@
 import "../styles/Resume.css";
 import ResumeHeader from "../components/Resume/Header/ResumeHeader.jsx";
 import LineHeader from "./Resume/Utilities/LineHeader.jsx";
-import ExperienceContent from "./Resume/Experience/ExperienceContent.jsx";
 import SkillsContent from "./Resume/Skills/SkillsContent.jsx";
 import EducationSection from "./Resume/Education/EducationSection.jsx";
+import ExperienceSection from "./Resume/Experience/ExperienceSection.jsx";
 
 const Resume = ({ userData, expData, eduData, skillsData }) => {
     return (
@@ -15,7 +15,7 @@ const Resume = ({ userData, expData, eduData, skillsData }) => {
             </div>
             <div className="workexp-container">
                 <LineHeader title={"Work Experience"} />
-                <ExperienceContent expData={expData} />
+                <ExperienceSection expData={expData} />
             </div>
             <div classNames="skills-content-container">
                 <LineHeader title={"Skills"} />
