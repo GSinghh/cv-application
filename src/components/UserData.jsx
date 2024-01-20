@@ -27,7 +27,7 @@ const UserData = ({ userData, setUserData }) => {
             ${isClosing ? "closing" : ""}`}
         >
             <div className="user-header">
-                <h1 className="user-title">Personal Information</h1>
+                <h1 className="user-title">Personal Info</h1>
                 <div className="arrow" onClick={toggleView}>
                     <img
                         src={arrowUp}
