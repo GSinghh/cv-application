@@ -11,8 +11,8 @@ import { useState } from "react";
 
 const App = () => {
     const [userData, setUserData] = useState({});
-    const [educationData, setEducationData] = useState({});
-    const [experienceData, setExperienceData] = useState({});
+    const [educationData, setEducationData] = useState([]);
+    const [experienceData, setExperienceData] = useState([]);
     const [skillsData, setSkillsData] = useState({});
 
     return (
@@ -37,12 +37,6 @@ const App = () => {
                     expData={experienceData}
                     skillsData={skillsData}
                 />
-                {/* <a
-                    href="https://www.reddit.com/r/EngineeringResumes/wiki/index/"
-                    target="_blank"
-                >
-                    <img src={circleinfo} />
-                </a> */}
             </div>
         </div>
     );
