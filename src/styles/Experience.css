@@ -43,5 +43,11 @@ form > label {
 }
 textarea {
     resize: none;
-    font-family: "comfortaa";
+    font-family: "arial";
+}
+.job-description {
+    padding: 0px 40px;
+}
+.job-description > list {
+    font-size: 10px;
 }
