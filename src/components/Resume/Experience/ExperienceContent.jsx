@@ -16,7 +16,15 @@ const ExperienceContent = ({
                 <h3>{company}</h3>
                 <h3>{location}</h3>
             </div>
-            <h3>{description}</h3>
+            <div className="job-description">
+                <ul>
+                    {description.split("\n").map((point, index) => (
+                        <li key={index}>
+                            <h3>{point}</h3>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 };
