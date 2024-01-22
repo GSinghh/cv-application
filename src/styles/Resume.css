@@ -32,6 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-style: italic;
 }
 a {
     text-decoration: none;
