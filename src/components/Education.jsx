@@ -62,6 +62,7 @@ const Education = ({ educationData, setEducationData }) => {
                         value={formData.school}
                         onChange={handleInputChange}
                         name="school"
+                        placeholder="i.e. San Jose State University, UCLA"
                     />
                     <label>Degree</label>
                     <input
@@ -70,6 +71,7 @@ const Education = ({ educationData, setEducationData }) => {
                         value={formData.degree}
                         onChange={handleInputChange}
                         name="degree"
+                        placeholder="i.e. Bachelor of Science, Computer Science"
                     />
                     <label>Start Date</label>
                     <input
@@ -78,6 +80,7 @@ const Education = ({ educationData, setEducationData }) => {
                         value={formData.startDate}
                         onChange={handleInputChange}
                         name="startDate"
+                        placeholder="i.e. January 2015"
                     />
                     <label>End Date</label>
                     <input
@@ -86,6 +89,7 @@ const Education = ({ educationData, setEducationData }) => {
                         value={formData.endDate}
                         onChange={handleInputChange}
                         name="endDate"
+                        placeholder="i.e. January 2016"
                     />
                     <label>Location</label>
                     <input
@@ -94,6 +98,7 @@ const Education = ({ educationData, setEducationData }) => {
                         value={formData.location}
                         onChange={handleInputChange}
                         name="location"
+                        placeholder="i.e. Los Angeles, CA"
                     />
                     <button type="submit">Add Education</button>
                 </form>
