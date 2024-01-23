@@ -64,6 +64,7 @@ const Experience = ({ experienceData, setExperienceData }) => {
                         onChange={handleInputChange}
                         value={formData.position}
                         name="position"
+                        placeholder="i.e. Software Engineer"
                     />
                     <label>Company</label>
                     <input
@@ -72,6 +73,7 @@ const Experience = ({ experienceData, setExperienceData }) => {
                         onChange={handleInputChange}
                         value={formData.company}
                         name="company"
+                        placeholder="i.e. Apple"
                     />
                     <label>Location</label>
                     <input
@@ -80,6 +82,7 @@ const Experience = ({ experienceData, setExperienceData }) => {
                         onChange={handleInputChange}
                         value={formData.location}
                         name="location"
+                        placeholder="i.e. Cupertino, CA"
                     />
                     <label>Start Date</label>
                     <input
@@ -88,6 +91,7 @@ const Experience = ({ experienceData, setExperienceData }) => {
                         onChange={handleInputChange}
                         value={formData.startDate}
                         name="startDate"
+                        placeholder="i.e. January 2015"
                     />
                     <label>End Date</label>
                     <input
@@ -96,6 +100,7 @@ const Experience = ({ experienceData, setExperienceData }) => {
                         onChange={handleInputChange}
                         value={formData.endDate}
                         name="endDate"
+                        placeholder="i.e. January 2016"
                     />
                     <label>Job Description</label>
                     <textarea
@@ -104,6 +109,7 @@ const Experience = ({ experienceData, setExperienceData }) => {
                         value={formData.description}
                         name="description"
                         rows="4"
+                        placeholder="Hit Enter After Each Sentence To Have Seperate Bullet Points"
                     ></textarea>
                     <button type="submit">Add Experience</button>
                 </form>
