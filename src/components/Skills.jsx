@@ -67,7 +67,7 @@ const Skills = ({ skillsData, setSkillsData }) => {
                         value={skillsData.tools}
                         onChange={handleInputChange}
                         name="tools"
-                        placeholder="i.e. Git, MongoDB, Vite"
+                        placeholder="i.e. Git, MongoDB, REST API Design, Vite"
                     />
                 </form>
             )}
