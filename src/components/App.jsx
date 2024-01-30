@@ -18,7 +18,12 @@ const App = () => {
     return (
         <div className="container">
             <div className="left-side">
-                <Header />
+                <Header
+                    userData={userData}
+                    eduData={educationData}
+                    expData={experienceData}
+                    skillData={skillsData}
+                />
                 <UserData userData={userData} setUserData={setUserData} />
                 <Education
                     educationData={educationData}
