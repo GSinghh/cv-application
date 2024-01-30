@@ -1,13 +1,15 @@
-import { Page, View, Document, StyleSheet } from "@react-pdf/renderer";
-import ResumeHeader from "../Header/ResumeHeader";
-import LineHeader from "./LineHeader";
-import EducationSection from "../Education/EducationSection";
-import ExperienceSection from "../Experience/ExperienceSection";
-import SkillsContent from "../Skills/SkillsContent";
+import {
+    Page,
+    View,
+    Document,
+    StyleSheet,
+    Link,
+    Text,
+} from "@react-pdf/renderer";
 
 const styles = StyleSheet.create({
     page: {
-        backgroundColor: "#FFFFFF",
+        backgroundColor: "white",
     },
     section: {
         padding: 10,
@@ -17,8 +19,9 @@ const styles = StyleSheet.create({
 const ResumePDF = ({ userData, expData, eduData, skillsData }) => (
     <Document>
         <Page size="A4" style={styles.page}>
-            <View style={styles.section}></View>
-            <View style={styles.section}></View>
+            <View>
+                <Text>{userData.fullName}</Text>
+            </View>
         </Page>
     </Document>
 );
