@@ -17,7 +17,7 @@ const Resume = ({ userData, expData, eduData, skillsData }) => {
                 <LineHeader title={"Work Experience"} />
                 <ExperienceSection expData={expData} />
             </div>
-            <div classNames="skills-content-container">
+            <div className="skills-content-container">
                 <LineHeader title={"Skills"} />
                 <SkillsContent skillsData={skillsData} />
             </div>
