@@ -4,12 +4,15 @@ import githubMark from "../assets/github-mark.svg";
 import ResumePDF from "../components/Resume/Utilities/ResumePDF";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 
-const Header = () => {
+const Header = ({ userData, expData, eduData, skillsData }) => {
     return (
         <div className="header-container">
             <div className="title-container">
                 <h1 className="title">Resume.IO</h1>
-                <PDFDownloadLink document={<ResumePDF />} fileName="Resume.pdf">
+                <PDFDownloadLink
+                    document={<ResumePDF userData={userData} />}
+                    fileName="Resume.pdf"
+                >
                     {({ blob, url, loading, error }) =>
                         loading ? (
                             <button className="button" type="button">
