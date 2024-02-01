@@ -33,6 +33,9 @@ const styles = StyleSheet.create({
         textDecoration: "none",
         color: "black",
     },
+    bulletPoints: {
+        size: 10,
+    },
 });
 
 const ResumePDF = ({ userData, expData, eduData, skillsData }) => (
