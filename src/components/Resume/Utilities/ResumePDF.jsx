@@ -38,9 +38,9 @@ const resumeStyles = StyleSheet.create({
         padding: 20,
         fontFamily: "PT Serif",
     },
-
-    section: {
-        padding: 10,
+    spacing: {
+        paddingLeft: 10,
+        paddingRight: 10,
     },
 });
 
@@ -51,6 +51,12 @@ const dividerStyles = StyleSheet.create({
     line: {
         borderBottom: "1 px solid",
         width: "100%",
+    },
+});
+
+const skillsStyle = StyleSheet.create({
+    section: {
+        fontSize: "12",
     },
 });
 
@@ -92,6 +98,48 @@ const ResumeHeader = ({ fullName, email, github, linkedin }) => {
     );
 };
 
+const ResEduContent = ({ school, startDate, endDate, degree, location }) => {
+    return (
+        <View>
+            <View>
+                <Text>{school}</Text>
+                <Text>{startDate + " - " + endDate}</Text>
+            </View>
+            <View>
+                <Text>{degree}</Text>
+                <Text>{location}</Text>
+            </View>
+        </View>
+    );
+};
+
+const ResumeEdu = ({ eduData }) => {
+    return (
+        <View style={resumeStyles.spacing}>
+            {eduData.map((eduItem, index) => (
+                <ResEduContent
+                    key={index}
+                    school={eduItem.school}
+                    degree={eduItem.degree}
+                    startDate={eduItem.startDate}
+                    endDate={eduItem.endDate}
+                    location={eduItem.location}
+                />
+            ))}
+        </View>
+    );
+};
+
+const ResumeSkills = ({ lang, tech, tools }) => {
+    return (
+        <View style={resumeStyles.spacing}>
+            <Text style={skillsStyle.section}>Languages: {lang}</Text>
+            <Text style={skillsStyle.section}>Technologies: {tech}</Text>
+            <Text style={skillsStyle.section}>Tools: {tools}</Text>
+        </View>
+    );
+};
+
 const ResumePDF = ({ userData, expData, eduData, skillsData }) => (
     <Document>
         <Page size="A4" style={resumeStyles.page}>
@@ -105,6 +153,20 @@ const ResumePDF = ({ userData, expData, eduData, skillsData }) => (
             </View>
             <View>
                 <Divider name={"Education"} />
+            </View>
+            <View>
+                <Divider name={"Work Experience"} />
+            </View>
+            <View>
+                <Divider name={"Projects"} />
+            </View>
+            <View>
+                <Divider name={"Skills"} />
+                <ResumeSkills
+                    lang={skillsData.languages}
+                    tech={skillsData.technologies}
+                    tools={skillsData.tools}
+                />
             </View>
         </Page>
     </Document>
