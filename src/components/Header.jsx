@@ -10,7 +10,14 @@ const Header = ({ userData, expData, eduData, skillsData }) => {
             <div className="title-container">
                 <h1 className="title">Resume.IO</h1>
                 <PDFDownloadLink
-                    document={<ResumePDF userData={userData} />}
+                    document={
+                        <ResumePDF
+                            userData={userData}
+                            expData={expData}
+                            eduData={eduData}
+                            skillsData={skillsData}
+                        />
+                    }
                     fileName="Resume.pdf"
                 >
                     {({ blob, url, loading, error }) =>
