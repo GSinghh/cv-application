@@ -13,6 +13,24 @@ Font.register({
     src: "http://fonts.gstatic.com/s/ptserif/v8/EgBlzoNBIHxNPCMwXaAhYPesZW2xOQ-xsNqO47m55DA.ttf",
 });
 
+const resumeStyles = StyleSheet.create({
+    page: {
+        backgroundColor: "white",
+        padding: 25,
+        fontFamily: "PT Serif",
+    },
+    spacing: {
+        paddingLeft: 10,
+        paddingRight: 10,
+    },
+    fontSizing: {
+        fontSize: 12,
+    },
+    ListPadding: {
+        padding: 5,
+    },
+});
+
 const headerStyles = StyleSheet.create({
     title: {
         fontSize: 25,
@@ -32,18 +50,6 @@ const headerStyles = StyleSheet.create({
     },
 });
 
-const resumeStyles = StyleSheet.create({
-    page: {
-        backgroundColor: "white",
-        padding: 20,
-        fontFamily: "PT Serif",
-    },
-    spacing: {
-        paddingLeft: 10,
-        paddingRight: 10,
-    },
-});
-
 const dividerStyles = StyleSheet.create({
     name: {
         size: 15,
@@ -54,9 +60,25 @@ const dividerStyles = StyleSheet.create({
     },
 });
 
-const skillsStyle = StyleSheet.create({
-    section: {
-        fontSize: "12",
+const eduStyles = StyleSheet.create({
+    first: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+    },
+    second: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        paddingBottom: 5,
+    },
+});
+
+const listStyles = StyleSheet.create({
+    bulletPoint: {
+        // fontWeight: "bold",
+        paddingRight: 2,
+    },
+    listItem: {
+        flexDirection: "row",
     },
 });
 
@@ -65,6 +87,20 @@ const Divider = ({ name }) => {
         <View>
             <Text style={dividerStyles.name}>{name}</Text>
             <Text style={dividerStyles.line}></Text>
+        </View>
+    );
+};
+
+const DisplayList = ({ description }) => {
+    const lines = description.split("\n");
+    return (
+        <View>
+            {lines.map((point, index) => (
+                <View key={index} style={listStyles.listItem}>
+                    <Text style={listStyles.bulletPoint}>•</Text>
+                    <Text>{point}</Text>
+                </View>
+            ))}
         </View>
     );
 };
@@ -100,12 +136,12 @@ const ResumeHeader = ({ fullName, email, github, linkedin }) => {
 
 const ResEduContent = ({ school, startDate, endDate, degree, location }) => {
     return (
-        <View>
-            <View>
+        <View style={resumeStyles.fontSizing}>
+            <View style={eduStyles.first}>
                 <Text>{school}</Text>
                 <Text>{startDate + " - " + endDate}</Text>
             </View>
-            <View>
+            <View style={eduStyles.second}>
                 <Text>{degree}</Text>
                 <Text>{location}</Text>
             </View>
@@ -130,12 +166,55 @@ const ResumeEdu = ({ eduData }) => {
     );
 };
 
-const ResumeSkills = ({ lang, tech, tools }) => {
+const ResExpContent = ({
+    position,
+    company,
+    startDate,
+    endDate,
+    description,
+    location,
+}) => {
+    return (
+        <View style={resumeStyles.fontSizing}>
+            <View style={eduStyles.first}>
+                <Text>{position}</Text>
+                <Text>{startDate + " - " + endDate}</Text>
+            </View>
+            <View style={eduStyles.second}>
+                <Text>{company}</Text>
+                <Text>{location}</Text>
+            </View>
+            <View>
+                <DisplayList description={description} />
+            </View>
+        </View>
+    );
+};
+
+const ResumeExp = ({ expData }) => {
     return (
         <View style={resumeStyles.spacing}>
-            <Text style={skillsStyle.section}>Languages: {lang}</Text>
-            <Text style={skillsStyle.section}>Technologies: {tech}</Text>
-            <Text style={skillsStyle.section}>Tools: {tools}</Text>
+            {expData.map((expItem, index) => (
+                <ResExpContent
+                    key={index}
+                    position={expItem.position}
+                    company={expItem.company}
+                    location={expItem.location}
+                    startDate={expItem.startDate}
+                    endDate={expItem.endDate}
+                    description={expItem.description}
+                />
+            ))}
+        </View>
+    );
+};
+
+const ResumeSkills = ({ lang, tech, tools }) => {
+    return (
+        <View style={{ ...resumeStyles.spacing, ...resumeStyles.fontSizing }}>
+            <Text>Languages: {lang}</Text>
+            <Text>Technologies: {tech}</Text>
+            <Text>Tools: {tools}</Text>
         </View>
     );
 };
@@ -153,13 +232,15 @@ const ResumePDF = ({ userData, expData, eduData, skillsData }) => (
             </View>
             <View>
                 <Divider name={"Education"} />
+                <ResumeEdu eduData={eduData} />
             </View>
             <View>
                 <Divider name={"Work Experience"} />
+                <ResumeExp expData={expData} />
             </View>
-            <View>
+            {/* <View>
                 <Divider name={"Projects"} />
-            </View>
+            </View> */}
             <View>
                 <Divider name={"Skills"} />
                 <ResumeSkills
