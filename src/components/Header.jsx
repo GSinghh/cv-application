@@ -20,27 +20,16 @@ const Header = ({ userData, expData, eduData, skillsData }) => {
                     }
                     fileName="Resume.pdf"
                 >
-                    {({ blob, url, loading, error }) =>
-                        loading ? (
-                            <button className="button" type="button">
-                                Loading
-                                <img
-                                    className="button-icon"
-                                    src={downloadArrow}
-                                    alt="download icon"
-                                />
-                            </button>
-                        ) : (
-                            <button className="button">
-                                Download
-                                <img
-                                    className="button-icon"
-                                    src={downloadArrow}
-                                    alt="download icon"
-                                />
-                            </button>
-                        )
-                    }
+                    {({ blob, url, loading, error }) => (
+                        <button className="button">
+                            Download
+                            <img
+                                className="button-icon"
+                                src={downloadArrow}
+                                alt="download icon"
+                            />
+                        </button>
+                    )}
                 </PDFDownloadLink>
             </div>
             <div className="footer">
