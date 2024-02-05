@@ -42,14 +42,6 @@ const Header = ({ userData, expData, eduData, skillsData }) => {
                         )
                     }
                 </PDFDownloadLink>
-                {/* <button type="button" className="button">
-                    <span className="button-text">Download</span>
-                    <img
-                        className="button-icon"
-                        src={downloadArrow}
-                        alt="download icon"
-                    />
-                </button> */}
             </div>
             <div className="footer">
                 <a href="https://github.com/GSinghh">
