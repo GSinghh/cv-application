@@ -6,13 +6,14 @@ import Education from "./Education.jsx";
 import Experience from "./Experience.jsx";
 import Skills from "./Skills.jsx";
 import Resume from "./Resume.jsx";
+import Projects from "./Projects.jsx";
 import { useState } from "react";
-// import circleinfo from "../assets/circleinfo";
 
 const App = () => {
     const [userData, setUserData] = useState({});
     const [educationData, setEducationData] = useState([]);
     const [experienceData, setExperienceData] = useState([]);
+    const [projectData, setProjectData] = useState([]);
     const [skillsData, setSkillsData] = useState({});
 
     return (
@@ -33,6 +34,10 @@ const App = () => {
                     experienceData={experienceData}
                     setExperienceData={setExperienceData}
                 />
+                <Projects
+                    projectData={projectData}
+                    setProjectData={setProjectData}
+                />
                 <Skills skillsData={skillsData} setSkillsData={setSkillsData} />
             </div>
             <div className="right-side">
@@ -40,6 +45,7 @@ const App = () => {
                     eduData={educationData}
                     userData={userData}
                     expData={experienceData}
+                    projectData={projectData}
                     skillsData={skillsData}
                 />
             </div>
