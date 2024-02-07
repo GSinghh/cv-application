@@ -4,8 +4,9 @@ import LineHeader from "./Resume/Utilities/LineHeader.jsx";
 import SkillsContent from "./Resume/Skills/SkillsContent.jsx";
 import EducationSection from "./Resume/Education/EducationSection.jsx";
 import ExperienceSection from "./Resume/Experience/ExperienceSection.jsx";
+import ProjectSection from "./Resume/Projects/ProjectSection.jsx";
 
-const Resume = ({ userData, expData, eduData, skillsData }) => {
+const Resume = ({ userData, expData, eduData, projectData, skillsData }) => {
     return (
         <div className="resume-container">
             <ResumeHeader userData={userData} />
@@ -16,6 +17,10 @@ const Resume = ({ userData, expData, eduData, skillsData }) => {
             <div className="workexp-container">
                 <LineHeader title={"Work Experience"} />
                 <ExperienceSection expData={expData} />
+            </div>
+            <div className="project-container">
+                <LineHeader title={"Projects"} />
+                <ProjectSection projectData={projectData} />
             </div>
             <div className="skills-content-container">
                 <LineHeader title={"Skills"} />
