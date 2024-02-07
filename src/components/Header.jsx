@@ -4,7 +4,7 @@ import githubMark from "../assets/github-mark.svg";
 import ResumePDF from "../components/Resume/Utilities/ResumePDF";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 
-const Header = ({ userData, expData, eduData, skillsData }) => {
+const Header = ({ userData, expData, eduData, skillsData, projectData }) => {
     return (
         <div className="header-container">
             <div className="title-container">
@@ -16,6 +16,7 @@ const Header = ({ userData, expData, eduData, skillsData }) => {
                             expData={expData}
                             eduData={eduData}
                             skillsData={skillsData}
+                            projectData={projectData}
                         />
                     }
                     fileName="Resume.pdf"
