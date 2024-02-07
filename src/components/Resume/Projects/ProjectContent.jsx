@@ -2,8 +2,15 @@ const ProjectContent = ({ name, technologies, link, description }) => {
     return (
         <div className="body-padding">
             <div className="first">
-                <h3>{position}</h3>
-                <h3>{link}</h3>
+                <div className="name-tech">
+                    <h3>{name}</h3>
+                    <h3>({technologies})</h3>
+                </div>
+                <h3>
+                    <a href={"https://" + link} target="_blank">
+                        {link}
+                    </a>
+                </h3>
             </div>
             <div className="job-description">
                 <ul>
@@ -17,3 +24,5 @@ const ProjectContent = ({ name, technologies, link, description }) => {
         </div>
     );
 };
+
+export default ProjectContent;
