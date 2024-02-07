@@ -16,7 +16,7 @@ const Projects = ({ projectData, setProjectData }) => {
         event.preventDefault();
         setProjectData([...projectData, formData]);
         setFormData({
-            projectName: "",
+            name: "",
             technologies: "",
             link: "",
             description: "",
