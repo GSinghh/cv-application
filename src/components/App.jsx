@@ -24,6 +24,7 @@ const App = () => {
                     eduData={educationData}
                     expData={experienceData}
                     skillsData={skillsData}
+                    projectData={projectData}
                 />
                 <UserData userData={userData} setUserData={setUserData} />
                 <Education
