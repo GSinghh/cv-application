@@ -10,7 +10,7 @@ import {
 
 Font.register({
     family: "PT Serif",
-    src: "http://fonts.gstatic.com/s/ptserif/v8/EgBlzoNBIHxNPCMwXaAhYPesZW2xOQ-xsNqO47m55DA.ttf",
+    src: "https://fonts.gstatic.com/s/ptserif/v8/EgBlzoNBIHxNPCMwXaAhYPesZW2xOQ-xsNqO47m55DA.ttf",
 });
 
 const resumeStyles = StyleSheet.create({
