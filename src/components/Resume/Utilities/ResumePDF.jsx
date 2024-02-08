@@ -41,7 +41,7 @@ const headerStyles = StyleSheet.create({
     title: {
         fontSize: 25,
         textAlign: "center",
-        paddingBottom: 10,
+        paddingBottom: 6,
     },
     header: {
         flexDirection: "row",
@@ -63,6 +63,7 @@ const dividerStyles = StyleSheet.create({
     line: {
         borderBottom: "1 px solid",
         width: "100%",
+        paddingBottom: "2",
     },
 });
 
@@ -142,7 +143,12 @@ const ResumeHeader = ({ fullName, email, github, linkedin }) => {
 
 const ResEduContent = ({ school, startDate, endDate, degree, location }) => {
     return (
-        <View style={resumeStyles.fontSizing}>
+        <View
+            style={{
+                ...resumeStyles.fontSizing,
+                ...resumeStyles.paddingBottom,
+            }}
+        >
             <View style={eduStyles.firstLine}>
                 <Text style={resumeStyles.boldText}>{school}</Text>
                 <Text>{startDate + " - " + endDate}</Text>
@@ -181,7 +187,12 @@ const ResExpContent = ({
     location,
 }) => {
     return (
-        <View style={resumeStyles.fontSizing}>
+        <View
+            style={{
+                ...resumeStyles.fontSizing,
+                ...resumeStyles.paddingBottom,
+            }}
+        >
             <View style={eduStyles.firstLine}>
                 <Text style={resumeStyles.boldText}>{position}</Text>
                 <Text>{startDate + " - " + endDate}</Text>
@@ -250,7 +261,9 @@ const ProjectsContent = ({ name, technologies, link, description }) => {
 
 const ResumeProjects = ({ projectData }) => {
     return (
-        <View style={resumeStyles.spacing}>
+        <View
+            style={{ ...resumeStyles.spacing, ...resumeStyles.paddingBottom }}
+        >
             {projectData.map((project, index) => (
                 <ProjectsContent
                     key={index}
