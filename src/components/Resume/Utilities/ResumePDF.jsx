@@ -24,7 +24,7 @@ const resumeStyles = StyleSheet.create({
         paddingRight: 10,
     },
     fontSizing: {
-        fontSize: 12,
+        fontSize: 11,
     },
     ListPadding: {
         padding: 5,
