@@ -34,3 +34,5 @@ Assuming you have npm installed, you will need to:
 
 4. A live demo of the project can be started by using:  
    `npm run dev`
+---
+<div align = 'center'>Developed by Gurpreet Singh Bassan</div>
